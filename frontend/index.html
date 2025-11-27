@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EmmiDev CodeBridge - Learn. Build. Grow.</title>
+    <meta name="description" content="Empowering African developers with world-class education and community support" />
+    
+    <!-- Prevent flash of unstyled content for dark mode -->
+    <script>
+      // Check for saved theme preference or default to 'dark'
+      const theme = localStorage.getItem('emmidev-theme') || 'dark';
+      if (theme === 'dark' || (!('emmidev-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+        document.documentElement.classList.add('dark');
+      } else {
+        document.documentElement.classList.remove('dark');
+      }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
